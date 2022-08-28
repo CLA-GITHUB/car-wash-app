@@ -19,7 +19,7 @@ const Footer: React.FC<FooterProps> = ({ ToggleNavigation, navigation }) => {
   const textStyle: string = "text-sm text-center";
   const active: string = "text-black font-semibold";
   return (
-    <footer className='fixed bottom-0 left-0 right-0 bg-[#ffffffdd]'>
+    <footer className='fixed bottom-0 left-0 right-0 bg-[#ffffffdd] max-w-lg mx-auto rounded-t-2xl'>
       <div className='max-w-md mx-auto py-3 px-2 '>
         <div className='flex justify-between items-center'>
           <div
