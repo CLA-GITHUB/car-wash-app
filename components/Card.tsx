@@ -48,6 +48,7 @@ const Card: React.FC<CardProps> = ({ cars }: CardProps) => {
   }`;
   const pillStyle: string =
     "border font-[600] text-sm rounded-full py-1 text-gray-600 px-3";
+  const [openToolTip, setOpenToolTip] = React.useState<boolean>(false);
 
   return (
     <div className='bg-white drop-shadow-xl rounded-xl p-5'>
@@ -63,8 +64,14 @@ const Card: React.FC<CardProps> = ({ cars }: CardProps) => {
               label='Wash has not been completed'
               color='indigo'
               withArrow
+              opened={openToolTip}
             >
-              <p className='cursor-pointer'>🟡</p>
+              <p
+                className='cursor-pointer'
+                onClick={() => setOpenToolTip((prev: boolean) => !prev)}
+              >
+                🟡
+              </p>
             </Tooltip>
           )}
           {expand ? (
