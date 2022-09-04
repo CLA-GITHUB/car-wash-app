@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       className={`${
         red ? "bg-[#D43F6B]" : "bg-[#4D586F]"
-      } px-4 py-4 text-white font-semibold rounded drop-shadow-lg font-saria ${
+      } px-4 py-4 text-white font-mdium rounded drop-shadow-lg font-saria ${
         full && "w-full"
       }`}
       type={buttonType}
