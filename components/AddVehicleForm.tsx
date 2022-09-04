@@ -9,7 +9,7 @@ interface VehicleFormProps {
   color: string;
   plate_no: string;
 }
-const inputStyle: string = "w-full h-12 px-2 rounded drop-shadow-lg";
+const inputStyle: string = "w-full h-12 px-2 rounded drop-shadow-lg font-saria";
 const fieldContainerStyle: string = "mb-4";
 const AddVehicleForm: React.FC<{}> = ({}) => {
   const initialValues: VehicleFormProps = {

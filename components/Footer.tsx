@@ -16,19 +16,23 @@ const Footer: React.FC<FooterProps> = ({ ToggleNavigation, navigation }) => {
   const iconContainerStyle: string =
     "flex flex-col justify-center items-center space-y-1 cursor-pointer";
   const iconStyle: string = "text-xl";
-  const textStyle: string = "text-sm text-center";
-  const active: string = "text-black font-semibold";
+  const textStyle: string = "text-sm text-center tracking-wide";
+  const active: string = "text-black font-medium";
   return (
-    <footer className='fixed bottom-0 left-0 right-0 bg-[#ffffffdd] max-w-lg mx-auto rounded-t-2xl'>
-      <div className='max-w-md mx-auto py-3 px-2 '>
+    <footer className='fixed bottom-0 left-0 right-0 bg-[#ffffffdd] max-w-lg mx-auto rounded-t-lg'>
+      <div className='max-w-md mx-auto py-4 px-5 '>
         <div className='flex justify-between items-center'>
           <div
             className={`${iconContainerStyle} ${
-              navigation.home ? active : "text-gray-600"
+              navigation.home ? active : "text-gray-400"
             }`}
             onClick={() => ToggleNavigation("home")}
           >
-            <RiHome4Fill className={`${iconStyle}`} />
+            <RiHome4Fill
+              className={`${iconStyle} ${
+                navigation.home ? active : "text-gray-400"
+              }`}
+            />
             <p className={`${textStyle}`}>Home</p>
           </div>
 
@@ -38,7 +42,11 @@ const Footer: React.FC<FooterProps> = ({ ToggleNavigation, navigation }) => {
             }`}
             onClick={() => ToggleNavigation("cars")}
           >
-            <RiCarFill className={`${iconStyle}`} />
+            <RiCarFill
+              className={`${iconStyle} ${
+                navigation.cars ? active : "text-gray-400"
+              }`}
+            />
             <p className={`${textStyle}`}>Cars</p>
           </div>
 
@@ -48,8 +56,12 @@ const Footer: React.FC<FooterProps> = ({ ToggleNavigation, navigation }) => {
             }`}
             onClick={() => ToggleNavigation("wash")}
           >
-            <RiCarWashingFill className={`${iconStyle}`} />
-            <p className={`${textStyle}`}>Book wash</p>
+            <RiCarWashingFill
+              className={`${iconStyle} ${
+                navigation.wash ? active : "text-gray-400"
+              }`}
+            />
+            <p className={`${textStyle}`}>Wash</p>
           </div>
 
           <div
@@ -58,7 +70,11 @@ const Footer: React.FC<FooterProps> = ({ ToggleNavigation, navigation }) => {
             }`}
             onClick={() => ToggleNavigation("settings")}
           >
-            <RiSettings4Fill className={`${iconStyle}`} />
+            <RiSettings4Fill
+              className={`${iconStyle} ${
+                navigation.settings ? active : "text-gray-400"
+              }`}
+            />
             <p className={`${textStyle}`}>Settings</p>
           </div>
         </div>
