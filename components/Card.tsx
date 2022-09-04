@@ -56,7 +56,7 @@ const Card: React.FC<CardProps> = ({ cars }: CardProps) => {
       <div className='w-full flex justify-between items-center'>
         <div className={`${wrapperStyle}`}>
           <p>🚘</p>
-          <p>Toyota Camry</p>
+          <p className='font-medium tracking-wider'>Toyota Camry</p>
         </div>
         <div className={`${wrapperStyle}`}>
           {!cars && (
@@ -91,7 +91,7 @@ const Card: React.FC<CardProps> = ({ cars }: CardProps) => {
       {expand && (
         <div className='mt-4'>
           <div>
-            <div className='h-48  bg-[#CBDCFE] flex justify-center items-center rounded-xl'>
+            <div className='h-56  bg-[#CBDCFE] flex justify-center items-center rounded-xl'>
               <p className='text-7xl'>🚘</p>
             </div>
 
