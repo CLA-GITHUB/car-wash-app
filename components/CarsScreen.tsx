@@ -10,7 +10,7 @@ const CarsScreen: React.FC<CarsScreenProps> = ({}: CarsScreenProps) => {
     <div className='pb-28'>
       <Title>Added vehicles</Title>
       <div className='sticky top-0 left-0 right-0 z-50 mb-4'>
-        <FormModal />
+        <FormModal>Add vehicle</FormModal>
       </div>
       <div className='space-y-3'>
         <Card cars />

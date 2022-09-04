@@ -20,8 +20,8 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       className={`${
-        red ? "bg-[#D43F6B]" : "bg-[#8D9EFF]"
-      } px-4 py-3 text-white font-semibold rounded drop-shadow-lg font-saria ${
+        red ? "bg-[#D43F6B]" : "bg-[#4D586F]"
+      } px-4 py-4 text-white font-semibold rounded drop-shadow-lg font-saria ${
         full && "w-full"
       }`}
       type={buttonType}

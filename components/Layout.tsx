@@ -8,7 +8,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, index }: LayoutProps) => {
   return (
-    <div className='bg-[#E8E9EF] min-h-screen max-w-screen px-2 font-saria'>
+    <div className='bg-[#E8E9EF] min-h-screen max-w-screen px-6 font-saria'>
       {children}
     </div>
   );

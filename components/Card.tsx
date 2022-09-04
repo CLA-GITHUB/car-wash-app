@@ -2,6 +2,7 @@ import { Tooltip } from "@mantine/core";
 import * as React from "react";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import Button from "./Button";
+import FormModal from "./FormModal";
 interface CardProps {
   cars?: boolean;
 }
@@ -47,7 +48,7 @@ const Card: React.FC<CardProps> = ({ cars }: CardProps) => {
     cars ? "w-full" : " w-[48%]"
   }`;
   const pillStyle: string =
-    "border font-[600] text-sm rounded-full py-1 text-gray-600 px-3";
+    "border font-[600] text-sm rounded-full py-1 text-gray-600 px-3 font-saria";
   const [openToolTip, setOpenToolTip] = React.useState<boolean>(false);
 
   return (
@@ -60,7 +61,6 @@ const Card: React.FC<CardProps> = ({ cars }: CardProps) => {
         <div className={`${wrapperStyle}`}>
           {!cars && (
             <Tooltip
-              multiline
               label='Wash has not been completed'
               color='indigo'
               withArrow
@@ -123,10 +123,18 @@ const Card: React.FC<CardProps> = ({ cars }: CardProps) => {
                 <div className='my-4 space-y-2'>
                   <p>Toyota Camry</p>
                   <div className='flex flex-wrap items-center space-x-1 space-y-1'>
-                    <p className={`${pillStyle}`}>Saloon</p>
-                    <p className={`${pillStyle}`}>Black</p>
-                    <p className={`${pillStyle}`}>2019</p>
-                    <p className={`${pillStyle}`}>EYK-1001</p>
+                    <FormModal info pill>
+                      <p className={`${pillStyle}`}>Saloon</p>
+                    </FormModal>
+                    <FormModal info pill>
+                      <p className={`${pillStyle}`}>Black</p>
+                    </FormModal>
+                    <FormModal info pill>
+                      <p className={`${pillStyle}`}>2019</p>
+                    </FormModal>
+                    <FormModal info pill>
+                      <p className={`${pillStyle}`}>EYK-1001</p>
+                    </FormModal>
                   </div>
                 </div>
                 {!cars && (
