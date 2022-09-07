@@ -15,7 +15,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ ToggleNavigation, navigation }) => {
   const iconContainerStyle: string =
     "flex flex-col justify-center items-center space-y-1 cursor-pointer";
-  const iconStyle: string = "text-xl";
+  const iconStyle: string = "text-2xl";
   const textStyle: string = "text-sm text-center tracking-wide";
   const active: string = "text-black font-medium";
   return (

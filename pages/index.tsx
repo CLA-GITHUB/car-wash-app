@@ -75,6 +75,9 @@ const Home: NextPage = () => {
           <meta name='description' content='Welcome to your dashboard' />
           <link rel='icon' href='/favicon.ico' />
         </Head>
+        <p className='text-[150px] text-purple-900 tracking-wider font-bold'>
+          Ayo is my GOAT!!!
+        </p>
         {navigation.home && <HomeScreen />}
         {navigation.cars && <CarsScreen />}
         {navigation.wash && <WashScreen />}
