@@ -75,7 +75,6 @@ const Home: NextPage = () => {
           <meta name='description' content='Welcome to your dashboard' />
           <link rel='icon' href='/favicon.ico' />
         </Head>
-
         {navigation.home && <HomeScreen />}
         {navigation.cars && <CarsScreen />}
         {navigation.wash && <WashScreen />}
