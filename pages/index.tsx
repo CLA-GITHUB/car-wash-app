@@ -2,7 +2,6 @@ import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Layout from "../components/Layout";
-import Footer from "../components/Footer";
 import HomeScreen from "../components/HomeScreen";
 import WashScreen from "../components/WashScreen";
 import SettingScreen from "../components/SettingsScreen";
@@ -69,19 +68,15 @@ const Home: NextPage = () => {
   };
   return (
     <Layout index>
-      <div className='max-w-md mx-auto'>
-        <Head>
-          <title>Dashboard - Crogam</title>
-          <meta name='description' content='Welcome to your dashboard' />
-          <link rel='icon' href='/favicon.ico' />
-        </Head>
-        {navigation.home && <HomeScreen />}
-        {navigation.cars && <CarsScreen />}
-        {navigation.wash && <WashScreen />}
-        {navigation.settings && <SettingScreen />}
-      </div>
-
-      <Footer navigation={navigation} ToggleNavigation={ToggleNavigation} />
+      <Head>
+        <title>Dashboard - Crogam</title>
+        <meta name='description' content='Welcome to your dashboard' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      {navigation.home && <HomeScreen />}
+      {navigation.cars && <CarsScreen />}
+      {navigation.wash && <WashScreen />}
+      {navigation.settings && <SettingScreen />}
     </Layout>
   );
 };

@@ -20,6 +20,10 @@ export default class _Document extends Document {
             href='https://fonts.googleapis.com/css2?family=Saira&display=swap'
             rel='stylesheet'
           />
+          <meta
+            name='viewport'
+            content='minimum-scale=1, initial-scale=1, width=device-width'
+          />
         </Head>
         <body>
           <Main />
